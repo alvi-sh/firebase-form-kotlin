@@ -29,7 +29,9 @@ class MainActivity : AppCompatActivity() {
             var password = mainBinding.password.text.toString()
             var confirmPassword = mainBinding.confirmPassword.text.toString()
 
+            auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
 
+            }
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
