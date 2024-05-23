@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,7 +31,30 @@ class MainActivity : AppCompatActivity() {
             var confirmPassword = mainBinding.confirmPassword.text.toString()
 
             auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+                task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(applicationContext, "User Created", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(applicationContext, task.exception?.message.toString(), Toast.LENGTH_LONG).show()
+                }
+            }
+        }
 
+        mainBinding.loginBtn.setOnClickListener {
+            var firstName = mainBinding.firstName.text.toString()
+            var lastName = mainBinding.lastName.text.toString()
+            var address = mainBinding.address.text.toString()
+            var email = mainBinding.email.text.toString()
+            var password = mainBinding.password.text.toString()
+            var confirmPassword = mainBinding.confirmPassword.text.toString()
+
+            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+                    task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(applicationContext, "Login Successful", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(applicationContext, task.exception?.message.toString(), Toast.LENGTH_LONG).show()
+                }
             }
         }
 
