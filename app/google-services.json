@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "304715478274",
+    "project_id": "first-firebase-fc91f",
+    "storage_bucket": "first-firebase-fc91f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304715478274:android:ae767e5b4026938b4c3e1b",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSL4I4nm5m_HQdoSrUczN1wb-R0Myitck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
