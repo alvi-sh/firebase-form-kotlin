@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -21,6 +22,11 @@ class MainActivity : AppCompatActivity() {
 
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
+
+        mainBinding.forgetPassword.setOnClickListener {
+            var intent = Intent(this@MainActivity, ForgetPassword::class.java)
+            startActivity(intent)
+        }
 
         mainBinding.signupBtn.setOnClickListener {
             var firstName = mainBinding.firstName.text.toString()
